@@ -10,9 +10,12 @@ export default function CreateAd() {
 
   return (
     <>
+    <div style={{display:'flex', justifyContent:'center',alignItems:'center',padding:'5%'}}>
       <MediaAdCard setNavigateUrl={setNavigateUrl} />
       <TextAdCard setNavigateUrl={setNavigateUrl} />
-      <Button onClick={() => navigate(navigateUrl)}>Next</Button>
+    </div>
+
+      <Button style={{justifyContent:'center',alignItems:'center',marginLeft:'65%'}} onClick={() => navigate(navigateUrl)}>Next</Button>
     </>
   );
 }

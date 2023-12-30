@@ -1,7 +1,9 @@
+import TextMediaForm from '../components/TextMediaForm'
 export default function MediaAd() {
   return (
-    <>
-      <div>MediaAd</div>
-    </>
+      <>
+      
+      <TextMediaForm />
+      </>
   );
-}
+  }

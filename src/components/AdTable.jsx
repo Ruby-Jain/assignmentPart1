@@ -4,7 +4,6 @@ import {
   useMaterialReactTable,
 } from "material-react-table";
 
-//nested data is ok, see accessorKeys in ColumnDef below
 const data = [
   {
     name: {
@@ -54,11 +53,11 @@ const data = [
 ];
 
 const Example = () => {
-  //should be memoized or stable
+
   const columns = useMemo(
     () => [
       {
-        accessorKey: "name.firstName", //access nested data with dot notation
+        accessorKey: "name.firstName", 
         header: "First Name",
         size: 150,
       },
@@ -68,7 +67,7 @@ const Example = () => {
         size: 150,
       },
       {
-        accessorKey: "address", //normal accessorKey
+        accessorKey: "address", 
         header: "Address",
         size: 200,
       },
@@ -88,7 +87,7 @@ const Example = () => {
 
   const table = useMaterialReactTable({
     columns,
-    data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    data, 
   });
 
   return <MaterialReactTable table={table} />;

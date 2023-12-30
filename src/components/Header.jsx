@@ -7,7 +7,6 @@ export default function Header() {
   return (
     <Sheet
       variant="solid"
-      color="primary"
       invertedColors
       sx={{
         display: "flex",
@@ -18,6 +17,13 @@ export default function Header() {
       }}
     >
       <Box sx={{ flex: 1, display: "flex", gap: 1, px: 2 }}>App Logo</Box>
+      <Link to={"/"}>
+        <Box sx={{ display: "flex", flexShrink: 0, gap: 3 }}>
+          <Button sx={{ display: { xs: "none", md: "inline-flex" } }}>
+            Dashboard
+          </Button>
+        </Box>
+      </Link>
       <Link to={"/create-ad"}>
         <Box sx={{ display: "flex", flexShrink: 0, gap: 2 }}>
           <Button sx={{ display: { xs: "none", md: "inline-flex" } }}>
